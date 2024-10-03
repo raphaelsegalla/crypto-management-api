@@ -16,7 +16,7 @@ import java.util.UUID;
 @Table(name = "TB_CRYPTO")
 public class Crypto implements Serializable {
 
-    private static final long serialVersionUID = 1L;
+    private static final long serialVersionUUID = 1L;
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -30,6 +30,8 @@ public class Crypto implements Serializable {
 
     @Column(nullable = false, length = 250)
     private String description;
+
+    private String urlIntegration;
 
     @Column(nullable = false)
     @Enumerated(EnumType.STRING)
